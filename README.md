@@ -7,3 +7,10 @@ using the [SCIM 2 SDK](https://github.com/pingidentity/scim2) and
 For more example code, it may be helpful to look at the unit tests for the
 **scim2-sdk-server** component. For general usage information on the SCIM 2 SDK, 
 visit the [SCIM 2 SDK wiki](https://github.com/pingidentity/scim2/wiki).
+
+
+## Running this example
+
+Build using standard Maven goals: E.g., `mvn compile` or `mvn package`
+
+To run in Jetty: `mvn jetty:run`
