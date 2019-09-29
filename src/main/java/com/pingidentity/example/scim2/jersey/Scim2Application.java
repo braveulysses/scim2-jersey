@@ -1,7 +1,3 @@
-/*
- * Copyright 2019 Ping Identity Corporation
- * All Rights Reserved.
- */
 package com.pingidentity.example.scim2.jersey;
 
 import com.fasterxml.jackson.jaxrs.cfg.JaxRSFeature;
