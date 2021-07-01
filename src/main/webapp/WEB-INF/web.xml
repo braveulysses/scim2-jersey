@@ -17,6 +17,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>SCIM 2 Jersey Example</servlet-name>
+        <!-- This defines the base context path for SCIM 2 requests -->
         <url-pattern>/scim2/*</url-pattern>
     </servlet-mapping>
 </web-app>
