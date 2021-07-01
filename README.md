@@ -21,6 +21,7 @@ By default, the base URL for SCIM 2 requests is `http://localhost:8888/scim2`, a
 endpoints are available:
 
 * `http://localhost:8888/scim2/ServiceProviderConfig`
+* `http://localhost:8888/scim2/Schemas`
 * `http://localhost:8888/scim2/ResourceTypes`
 * `http://localhost:8888/scim2/Users`
 
