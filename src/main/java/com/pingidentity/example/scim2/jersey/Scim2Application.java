@@ -27,7 +27,7 @@ public class Scim2Application extends ResourceConfig
     register(JsonProcessingExceptionMapper.class);
 
     // JSON provider
-    final JacksonJsonProvider provider =
+    JacksonJsonProvider provider =
         new JacksonJsonProvider(JsonUtils.createObjectMapper());
     provider.configure(JaxRSFeature.ALLOW_EMPTY_INPUT, false);
     register(provider);

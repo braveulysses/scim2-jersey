@@ -10,13 +10,11 @@ import com.unboundid.scim2.server.utils.ResourceTypeDefinition;
 import com.unboundid.scim2.server.utils.SimpleSearchResults;
 
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
 import static com.unboundid.scim2.common.utils.ApiConstants.MEDIA_TYPE_SCIM;
@@ -48,7 +46,7 @@ public class UsersEndpoint
   public SimpleSearchResults<UserResource> search(
       @Context final UriInfo uriInfo) throws ScimException
   {
-    final SimpleSearchResults<UserResource> results =
+    SimpleSearchResults<UserResource> results =
         new SimpleSearchResults<>(RESOURCE_TYPE_DEFINITION, uriInfo);
     results.add(user123());
     results.add(userABC());
@@ -87,7 +85,7 @@ public class UsersEndpoint
 
     if (resource != null)
     {
-      final ResourcePreparer<UserResource> resourcePreparer =
+      ResourcePreparer<UserResource> resourcePreparer =
           new ResourcePreparer<>(RESOURCE_TYPE_DEFINITION, uriInfo);
       return resourcePreparer.trimRetrievedResource(resource);
     }
@@ -96,7 +94,7 @@ public class UsersEndpoint
 
   private UserResource user123()
   {
-    final UserResource resource = new UserResource().setUserName("user123");
+    UserResource resource = new UserResource().setUserName("user123");
     resource.setId("123");
     resource.setDisplayName("User 123");
     resource.setNickName("123");
@@ -105,7 +103,7 @@ public class UsersEndpoint
 
   private UserResource userABC()
   {
-    final UserResource resource = new UserResource().setUserName("userABC");
+    UserResource resource = new UserResource().setUserName("userABC");
     resource.setId("ABC");
     resource.setDisplayName("User ABC");
     resource.setNickName("ABC");
